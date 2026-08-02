@@ -137,71 +137,60 @@ body {
   justify-content: center;
 }
 
-/* --- Hero --- */
+/* --- Hero Section with Background Image --- */
 .hero {
   min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 4rem 1.5rem;
+  
+  /* Background Image Setup */
+  background-image: 
+    /* Semi-transparent overlay to ensure contrast */
+    linear-gradient(
+      rgba(15, 23, 42, 0.75), 
+      rgba(15, 23, 42, 0.75)
+    ),
+    /* Replace with your image URL or local path */
+    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff; /* Ensures text is always legible over dark overlay */
 }
 
-.badge {
-  background-color: rgba(37, 99, 235, 0.1);
-  color: var(--accent);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
+/* Update text colors inside hero to match the dark overlay background */
+.hero .subtitle {
+  color: #cbd5e1;
 }
 
-.hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin: 1rem 0;
+.hero .badge {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
-.highlight {
-  color: var(--accent);
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.2s;
-}
-
-.btn.primary {
-  background-color: var(--accent);
+.hero .btn.primary {
   color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  padding: 15px;
 }
 
-.btn.primary:hover {
-  background-color: var(--accent-hover);
+.hero .btn.primary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.btn.secondary {
-  border: 1px solid var(--border);
-  color: var(--text-primary);
+
+.hero .btn.secondary {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-.btn.secondary:hover {
-  background-color: var(--border);
+.hero .btn.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --- About --- */
